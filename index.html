@@ -2,56 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arrow Puzzle</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>Arrow Escape</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
 <body>
 
-    <div class="game-container">
+<div class="game">
 
-        <h1>⬆️ Arrow Puzzle</h1>
+    <!-- HEADER -->
 
-        <p class="subtitle">
-            Click the arrows in the correct direction!
-        </p>
+    <header class="header">
 
-        <div class="game-info">
+        <button
+            class="icon-button"
+            id="backButton"
+        >
+            ‹
+        </button>
 
-            <div class="info-box">
-                <span>Score</span>
-                <strong id="score">0</strong>
-            </div>
+        <h1>
+            Arrow Escape
+        </h1>
 
-            <div class="info-box">
-                <span>Lives</span>
-                <strong id="lives">3</strong>
-            </div>
+        <button
+            class="icon-button"
+            id="settingsButton"
+        >
+            ⚙
+        </button>
 
-            <div class="info-box">
-                <span>Time</span>
-                <strong id="timer">30</strong>
-            </div>
+    </header>
+
+
+    <!-- LEVEL -->
+
+    <div class="level">
+        Level
+        <span id="levelNumber">
+            1
+        </span>
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="stat-box">
+
+            <span>
+                ➤
+            </span>
+
+            <strong id="moves">
+                0
+            </strong>
 
         </div>
 
-        <div id="message">
-            Find the arrow pointing:
-            <strong id="target-direction">UP</strong>
+
+        <div class="lives">
+
+            <span id="heart1">
+                ❤️
+            </span>
+
+            <span id="heart2">
+                ❤️
+            </span>
+
+            <span id="heart3">
+                ❤️
+            </span>
+
         </div>
 
-        <div id="game-board"></div>
 
-        <button id="start-button">
-            Start Game
+        <div class="difficulty">
+
+            <span id="difficulty">
+                Easy
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME BOARD -->
+
+    <div
+        id="gameBoard"
+        class="game-board"
+    >
+
+    </div>
+
+
+    <!-- BOTTOM CONTROLS -->
+
+    <div class="controls">
+
+        <button
+            id="hintButton"
+            class="control-button"
+        >
+
+            💡
+
+            <span class="hint-count">
+                2
+            </span>
+
+        </button>
+
+
+        <button
+            id="restartButton"
+            class="control-button"
+        >
+
+            🔄
+
         </button>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <!-- MESSAGE -->
+
+    <div
+        id="message"
+        class="message"
+    >
+        Tap arrows to clear the board
+    </div>
+
+
+    <!-- GAME OVER -->
+
+    <div
+        id="gameOver"
+        class="overlay hidden"
+    >
+
+        <div class="popup">
+
+            <h2>
+                Game Over
+            </h2>
+
+            <p>
+                Try again!
+            </p>
+
+            <button
+                id="tryAgainButton"
+            >
+                Try Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEVEL COMPLETE -->
+
+    <div
+        id="levelComplete"
+        class="overlay hidden"
+    >
+
+        <div class="popup">
+
+            <h2>
+                🎉 Level Complete!
+            </h2>
+
+            <p>
+                Great job!
+            </p>
+
+            <button
+                id="nextLevelButton"
+            >
+                Next Level
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
